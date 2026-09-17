@@ -59,7 +59,7 @@ public class Filters {
 		Filters filterObj = new Filters();
 		ArrayList<Integer> nums = new ArrayList<>();
 		nums.add(90);
-		// inex 1 se sare element isme inset karega
+		// index 1 se sare element isme inset karega
 		nums.addAll(1, nums);
 		nums.add(100);
 		System.out.println(nums);
