@@ -3,6 +3,7 @@ package com.JavaDsaQuestions.problemSolvingDSA.ArrayStringHash;
 import java.awt.List;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -28,8 +29,20 @@ public class StreamOnString {
 		System.out.println("resultStreamStrArr - " + resultStreamStrArr);
 	}
 	
+	private void nonRepeatChar(String str) {
+		// TODO Auto-generated method stub
+		String lowerCaseStr = str.toLowerCase();
+		HashMap<Character, Integer> mp = new HashMap<>();
+//		key -> value, a = 2, g = 2, c=1, m = 2, o/p = c
+		for(int i = 0; i<str.length(); i++) {
+			mp.put(str.charAt(i), mp.getOrDefault(str.charAt(i), 0) +1);	
+		}
+		System.err.println("for visual log change - red color");
+		System.out.println("Printing map data - " + mp.toString());
+	}
+	
 	public static void main(String []args) {
-		StreamOnString objOnString = new StreamOnString();
+		StreamOnString objStreamOnString = new StreamOnString();
 //		ArrayList<StringBuffer> strArr = new ArrayList<>();
 //		strArr.add(new StringBuffer("Alok"));
 		ArrayList<String> strArr = new ArrayList<>();
@@ -41,7 +54,11 @@ public class StreamOnString {
 //		strArr.add()
 
 //		 Count Strings with Specific Prefix
-		objOnString.countWithSuffix(strArr);
+		objStreamOnString.countWithSuffix(strArr);
+		
+		//Find First Non-Repeated Character in a String
+		String str = "gameCraftGame";
+		objStreamOnString.nonRepeatChar(str);
 		
 	}
 
