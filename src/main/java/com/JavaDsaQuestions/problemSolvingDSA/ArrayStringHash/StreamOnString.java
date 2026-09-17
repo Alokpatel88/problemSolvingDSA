@@ -4,6 +4,7 @@ import java.awt.List;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -39,6 +40,12 @@ public class StreamOnString {
 		}
 		System.err.println("for visual log change - red color");
 		System.out.println("Printing map data - " + mp.toString());
+		// traverse on map and return result
+		int step = 0;
+		for(Map.Entry<Character, Integer> entry : mp.entrySet()) {
+			entry.getValue();
+			System.out.println("Step - " + step++ +  ", Curr Key" + entry.getKey() + "Curr value is : " + entry.getValue());
+		}
 	}
 	
 	public static void main(String []args) {
@@ -57,7 +64,7 @@ public class StreamOnString {
 		objStreamOnString.countWithSuffix(strArr);
 		
 		//Find First Non-Repeated Character in a String
-		String str = "gameCraftGame";
+		String str = "Alokaaa";
 		objStreamOnString.nonRepeatChar(str);
 		
 	}
