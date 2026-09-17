@@ -42,9 +42,17 @@ public class StreamOnString {
 		System.out.println("Printing map data - " + mp.toString());
 		// traverse on map and return result
 		int step = 0;
+		
 		for(Map.Entry<Character, Integer> entry : mp.entrySet()) {
-			entry.getValue();
-			System.out.println("Step - " + step++ +  ", Curr Key" + entry.getKey() + "Curr value is : " + entry.getValue());
+			System.out.println("key : " + entry.getKey() + " Value : " + entry.getValue());
+		}
+		//Find First Non-Repeated Character in a String
+		for(int i= 0 ; i<str.length(); i++) {
+			if(mp.get(str.charAt(i)) == 1) {
+				System.err.println("result is: " + str.charAt(i));
+				return;
+			}
+			
 		}
 	}
 	
@@ -64,7 +72,7 @@ public class StreamOnString {
 		objStreamOnString.countWithSuffix(strArr);
 		
 		//Find First Non-Repeated Character in a String
-		String str = "Alokaaa";
+		String str = "aAbbcddEff".toLowerCase();
 		objStreamOnString.nonRepeatChar(str);
 		
 	}
